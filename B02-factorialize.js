@@ -13,7 +13,7 @@ function fac(n){
 
 fac1 = factorialize(5);
 
-fac2 = fac(200);
+fac2 = fac(170);
 
 console.log(fac1);
 console.log(fac2);
