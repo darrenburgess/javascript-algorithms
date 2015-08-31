@@ -4,10 +4,14 @@ of size (second argument) and returns them as a multidimensional array.
 */
 
 function chunk(arr, size) {
-  // Break it up.
-  return arr;
+	arrFinal = [];
+	for (i = 0; i < arr.length; i += size){
+		chnk = arr.slice(i, i + size);
+		arrFinal.push(chnk);
+		}
+	return arrFinal;
 }
 
-result = chunk(['a', 'b', 'c', 'd'], 2);
+result = chunk(['a', 'b', 'c', 'd', 'e'], 2);
 
 console.log(result);
