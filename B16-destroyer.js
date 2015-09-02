@@ -21,6 +21,14 @@ function removeValues1(arr){
 	return filtered;
 }
 
+/*
+When you're working with the filter function is not necessary to use loops because
+you're already in a loop. After converting the arguments into an array with 
+[].slice.call(arguments), you could use indexOf that is responsible for returning 
+the position of a value in an array, if a value is not exists, this returns -1, so 
+we will take all the results that are -1
+*/
+
 // SO solutions
 //http://stackoverflow.com/questions/32352054/javascript-remove-values-from-an-error-that-are-in-a-second-array
 function removeValues2(arr){
