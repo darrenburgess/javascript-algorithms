@@ -21,10 +21,11 @@ function removeValues1(arr){
 	return filtered;
 }
 
-// SO solutions - http://stackoverflow.com/questions/32352054/javascript-remove-values-from-an-error-that-are-in-a-second-array
+// SO solutions
+//http://stackoverflow.com/questions/32352054/javascript-remove-values-from-an-error-that-are-in-a-second-array
 function removeValues2(arr){
     return arr.filter(function(val){
-        return [].slice.call(removeValues2.arguments).indexOf(val) === -1
+        return [].slice.call(removeValues2.arguments).indexOf(val) === -1;
     });
 }
 
