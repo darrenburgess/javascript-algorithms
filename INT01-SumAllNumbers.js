@@ -11,7 +11,7 @@ Array.reduce()
 
 */
 
-function sumAll(arr) {
+function sumAll1(arr) {
 	arrMax = Math.max.apply(Math, arr);
 	arrMin = Math.min.apply(Math, arr);
 	var number = 0;
