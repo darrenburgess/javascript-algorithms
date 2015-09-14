@@ -21,7 +21,6 @@ function diff(arr1, arr2) {
 			x++;
 			len = arr1.length;
 		}
-		console.log(arr1, arr2);
 	}
 	return arr1.concat(arr2);
 }
