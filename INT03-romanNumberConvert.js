@@ -5,6 +5,8 @@ All roman numerals answers should be provided in upper-case.
 
 
 function convert(num) {
+	final = '';
+	chunk = '';
 	tens = ['I','X','C','M'];
 	fives = ['V','L','D'];
 	numArray = String(num).split('').map(Number);
@@ -24,18 +26,17 @@ function convert(num) {
 		} else if ( number == 5 ) {
 			chunk = ltrFive;
 		} else if ( number == 6 || number == 7 || number == 8 ) {
-			chunk = ltrFive + Array( number - 4 ).join( ltrTensNext );
+			chunk = ltrFive + Array( number - 4 ).join( ltrTen );
 		} else if ( number == 9 ) {
 			chunk = ltrTen + ltrTensNext;
 		}
-
 		x = x + 1;
-
 		final = chunk + final;
-
 	}
+	return final;
 }
 
-result = convert(36);
-
-console.log(result);
+for (var j = 0; j < 4000; j++) {
+	result = convert(j);
+	console.log(j + ': ' + result);
+};
