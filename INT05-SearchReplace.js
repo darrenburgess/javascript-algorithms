@@ -47,6 +47,5 @@ function replace2 (str, before, after) {
 result1 = replace1("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
 result2 = replace2("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
 
-
 console.log(result1);
 console.log(result2);
