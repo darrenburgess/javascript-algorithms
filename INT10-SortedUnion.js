@@ -13,7 +13,7 @@ Array.reduce()
 
 */
 
-function unite1(arr1, arr2, arr3) {
+function unite1() {
 	arr = Array.prototype.slice.call(arguments);
 	arr2 = arr.reduce(function(prev,next){
 		return prev.concat(next);
@@ -35,8 +35,8 @@ function unite2(){
     }, []);
   }
 
-// result1 = unite1([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+result1 = unite1([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 result2 = unite2([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 
-// console.log(result1);
+console.log(result1);
 console.log(result2);
