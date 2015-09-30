@@ -24,15 +24,16 @@ function unite1(arr1, arr2, arr3) {
 	return newArr;
 }
 
-function unite2(arr1, arr2, arr3) {
-	arr = Array.prototype.slice.call(arguments).reduce(function(prev,next){
-		return prev.concat(next);
-	});
-	newArr = arr.filter(function(value, idx){
-		return arr.indexOf(value) == idx;
-	});
-	return newArr;
-}
+// http://stackoverflow.com/questions/31929074/using-javascript-array-reduce-to-remove-duplicates
+function unite2(){
+    // Flat array arguments, then process to reduce data
+	// If my result array doesn't get current element
+	// concat current element to result and return it
+	// Otherwise, just return actual result array
+    return [].concat.apply([], arguments).reduce(function(result, current){
+		return result.indexOf(current) === -1 ? result.concat(current) : result;
+    }, []);
+  }
 
 // result1 = unite1([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 result2 = unite2([1, 3, 2], [5, 2, 1, 4], [2, 1]);
